@@ -3,8 +3,8 @@ package main
 import (
 	"net/http"
 
-    "url-shortener/server"
 	"github.com/gin-gonic/gin"
+	"url-shortener/server"
 )
 
 func main() {
@@ -20,7 +20,6 @@ func main() {
 	router.NoRoute(func(c *gin.Context) {
 		c.HTML(http.StatusNotFound, "404.html", gin.H{})
 	})
-
 
 	router.Run("localhost:8080")
 }

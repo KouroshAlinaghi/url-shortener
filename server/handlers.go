@@ -26,9 +26,9 @@ func AddLink(c *gin.Context) {
 
 	shorten := shortener.Add(url)
 	c.HTML(http.StatusOK, "index.tmpl", gin.H{
-		"action": true,
+		"action":   true,
 		"original": url,
-		"shorten": domain + "/" + shorten,
+		"shorten":  domain + "/" + shorten,
 	})
 }
 
